@@ -12,7 +12,8 @@ public class Login {
         databaseConnection.InsertData(this.username,this.password);
     }
     public String getUsername() {
-        return username;
+        return databaseConnection.getUserName(this.username,this.password);
+        //return username;
     }
     public void setUsername(String username) {
         this.username = username;
