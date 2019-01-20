@@ -16,9 +16,7 @@ public class LoginController {
 
     @RequestMapping("login")
     public ModelAndView login(@RequestParam("username") String username, @RequestParam("password") String password){
-        Login login = new Login();
-        login.setUsername(username);
-        login.setPassword(password);
+        Login login = new Login(username,password);
         //Using ModelAndView we can send view along with object
         return new ModelAndView("welcome","username",login.getUsername());
     }
